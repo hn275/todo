@@ -23,5 +23,5 @@ export const postTodo = (req: Request, res: Response, next: NextFunction) => {
   };
   data.todoList.push(newTodo as never);
   writeFile(data);
-  res.status(201).json(data.todoList);
+  res.status(201).json(newTodo);
 };
