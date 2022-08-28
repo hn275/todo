@@ -1,17 +1,35 @@
-import type { Response } from 'express';
-import type { TodoParamRequest, Todo } from '../types/types';
+import type { Response, NextFunction } from 'express';
+import type { TodoParamRequest, Todo, RequestError } from '../types/types';
 import data from '../data.json';
 import { writeFile } from './writeFile';
 
-export const putTodo = (req: TodoParamRequest, res: Response) => {
-  // get params and query
-  const todoIndex = req.todoIndex;
-  const isComplete: boolean = req.query.isComplete === 'true' ? true : false;
-  const isActive: boolean = req.query.isActive === 'true' ? true : false;
+export const putTodo = (
+  req: TodoParamRequest,
+  res: Response,
+  next: NextFunction
+) => {
+  const { id, isComplete, isActive } = req.body.data; // requested params
+  const todoIndex = data.todoList.findIndex((todo: Todo) => todo.id === id); // requested todo index
+
+  // error handling
+  if (todoIndex === -1) {
+    const error: RequestError = new Error('No todo found');
+    error.status = 404;
+    return next(error);
+  }
+
   // update todo
-  const updatedTodo: Todo = data.todoList[todoIndex as number];
-  if (isComplete) updatedTodo.isComplete = isComplete as unknown as boolean;
-  if (isActive) updatedTodo.isActive = isActive as unknown as boolean;
-  writeFile(data);
-  res.json(data);
+  try {
+    // update todo
+    if (isComplete) data.todoList[todoIndex].isComplete = isComplete;
+    if (isActive) data.todoList[todoIndex].isActive = isActive;
+
+    // write file
+    writeFile(data);
+
+    // reponse
+    res.status(201).json(data.todoList[todoIndex]);
+  } catch (serverError) {
+    return next(serverError);
+  }
 };
