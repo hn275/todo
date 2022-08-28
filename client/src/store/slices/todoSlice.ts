@@ -50,8 +50,7 @@ const todoSlice = createSlice({
         postRequest.fulfilled,
         (state, action: PayloadAction<TodoItem>) => {
           state.status = 'success';
-          console.log(action.payload);
-          // state.todoList.push(action.payload);
+          state.todoList.push(action.payload);
         }
       )
       .addCase(postRequest.rejected, (state) => {

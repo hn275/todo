@@ -14,6 +14,11 @@ function App() {
     dispatch(handleGetRequest());
   }, []);
 
+  const todolist = useTodoSelector((state) => state.todo.todoList);
+  useEffect(() => {
+    console.log(todolist);
+  }, [todolist]);
+
   return (
     <div
       className='App'
