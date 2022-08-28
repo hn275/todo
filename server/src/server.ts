@@ -17,9 +17,9 @@ app.use(express.json());
 // Handling requests
 app.get('/', getTodo);
 app.post('/', postTodo);
+app.delete('/', deleteTodo);
 app.param('id', paramHandler); // handle params
 app.put('/:id', putTodo);
-app.delete('/:id', deleteTodo);
 app.use(errorHandler);
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
