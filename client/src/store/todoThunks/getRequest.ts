@@ -4,6 +4,5 @@ import axios from 'axios';
 
 export const handleGetRequest = createAsyncThunk('getAllTodos', async () => {
   const todos = await axios.get(SERVER_URL);
-  console.log(todos);
   return todos.data;
 });
