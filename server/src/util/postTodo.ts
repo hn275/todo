@@ -5,7 +5,7 @@ import { writeFile } from './writeFile';
 import data from '../data.json';
 
 export const postTodo = (req: Request, res: Response, next: NextFunction) => {
-  const { todo } = req.body;
+  const { todo } = req.body.data;
   // error handling
   if (!todo) {
     const error: RequestError = new Error(
