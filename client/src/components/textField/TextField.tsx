@@ -4,15 +4,24 @@ import { ReactComponent as CheckMark } from 'assets/images/icon-check.svg';
 
 interface TextFieldProps {
   children: React.ReactNode;
-  checked?: boolean | undefined;
+  isComplete?: boolean | undefined;
+  onClick: () => void;
 }
 
-export const TextField: React.FC<TextFieldProps> = ({ children, checked }) => {
-  console.log(checked);
+export const TextField: React.FC<TextFieldProps> = ({
+  children,
+  isComplete,
+  onClick,
+}) => {
   return (
-    <section className='text-field'>
-      <div className='indicator'>{checked && <CheckMark />}</div>
-      <div className='text'>{children}</div>
-    </section>
+    <div className='text-field'>
+      <div
+        className='text-field-indicator'
+        onClick={onClick}
+      >
+        {isComplete && <CheckMark />}
+      </div>
+      <div className='text-field-text'>{children}</div>
+    </div>
   );
 };

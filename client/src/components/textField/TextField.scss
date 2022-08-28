@@ -1,10 +1,12 @@
 .text-field {
+  background-color: gray;
+  padding: 0.5em;
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 1em;
-  .indicator {
+  .text-field-indicator {
     height: 1em;
     width: 1em;
     border-radius: 50%;

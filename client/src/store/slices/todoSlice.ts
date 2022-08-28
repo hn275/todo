@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import { handleGetRequest as getRequest } from 'store/todoThunks/getRequest';
+import { handlePostRequest as postRequest } from 'store/todoThunks/postRequest';
 
 interface TodoItem {
   id: string;
@@ -25,6 +26,7 @@ const todoSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
+      // Get
       .addCase(getRequest.pending, (state) => {
         state.status = 'pending';
       })
@@ -39,6 +41,22 @@ const todoSlice = createSlice({
         state.status = 'error';
         const error = new Error('get request failed');
         console.log(error.message);
+      })
+      // Post
+      .addCase(postRequest.pending, (state) => {
+        state.status = 'pending';
+      })
+      .addCase(
+        postRequest.fulfilled,
+        (state, action: PayloadAction<TodoItem>) => {
+          state.status = 'success';
+          console.log(action.payload);
+          // state.todoList.push(action.payload);
+        }
+      )
+      .addCase(postRequest.rejected, (state) => {
+        state.status = 'error';
+        console.log('rejected');
       });
   },
 });
