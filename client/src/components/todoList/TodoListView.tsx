@@ -3,6 +3,7 @@ import type { TodoItem } from 'store/slices/todoSlice';
 import { TextField } from 'components/textField/TextField';
 import { useTodoDispatch } from 'hooks/hooks';
 import { putRequest } from 'store/todoThunks/putRequest';
+import { Todo } from './Todo';
 
 interface TodoListViewProps {
   todo: TodoItem[];

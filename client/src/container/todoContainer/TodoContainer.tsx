@@ -1,7 +1,7 @@
 import { AddNewTodo } from 'features/addNewTodo/AddNewTodo';
 import { TodoList } from 'components/todoList/TodoList';
 
-export const Todo = () => {
+export const TodoContainer = () => {
   return (
     <section id='todo-app'>
       <div className='todo-new'>

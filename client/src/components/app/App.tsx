@@ -3,7 +3,7 @@ import './App.scss';
 import { handleGetRequest } from 'store/todoThunks/getRequest';
 import { useTodoSelector, useTodoDispatch } from 'hooks/hooks';
 import { DarkMode } from 'features/darkMode/DarkMode';
-import { Todo } from 'container/todo/Todo';
+import { TodoContainer } from 'container/todoContainer/TodoContainer';
 
 function App() {
   const { useEffect, useRef } = React;
@@ -34,7 +34,7 @@ function App() {
         </section>
       </header>
       <main>
-        <Todo />
+        <TodoContainer />
       </main>
     </div>
   );
