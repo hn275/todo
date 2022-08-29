@@ -17,7 +17,7 @@ export const AddNewTodo: React.FC<AddNewTodoProps> = () => {
     dispatch(handlePostRequest(dispatchNewTodo)); // dispatch action
     setNewTodo(() => ''); // clear input field
   };
-  // event listener
+  // Handling event listener
   const inputRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
     function handleReturnKey(this: HTMLElement, e: KeyboardEvent) {
@@ -26,9 +26,10 @@ export const AddNewTodo: React.FC<AddNewTodoProps> = () => {
       }
     }
     inputRef.current!.addEventListener('keypress', handleReturnKey);
+    // eslint-disable-next-line
     return () =>
       inputRef.current!.removeEventListener('keypress', handleReturnKey);
-  });
+  }, []);
 
   // TSX
   return (

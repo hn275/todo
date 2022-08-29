@@ -5,7 +5,6 @@ import { useTodoDispatch } from 'hooks/hooks';
 import { DarkMode } from 'features/darkMode/DarkMode';
 import { TodoContainer } from 'container/todoContainer/TodoContainer';
 import { TodoFilter } from 'features/todoFilter/TodoFilter';
-import DarkBG from 'assets/images/bg-desktop-dark.jpg';
 
 function App() {
   const { useEffect, useRef } = React;
@@ -14,7 +13,7 @@ function App() {
   const dispatch = useTodoDispatch();
   useEffect(() => {
     dispatch(handleGetRequest());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div

@@ -1,5 +1,4 @@
 import { TodoRemain } from 'features/todoRemain/TodoRemain';
-import { TodoFilter } from 'features/todoFilter/TodoFilter';
 import { ClearComplete } from 'features/clearComplete/ClearComplete';
 import './TodoMenu.scss';
 

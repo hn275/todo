@@ -18,7 +18,7 @@ export const DarkMode: FC<DarkModeProps> = ({ node }) => {
     } else {
       node.current!.dataset.theme = 'light';
     }
-  }, [darkMode]);
+  }, [darkMode, node]);
   return (
     <>
       <button

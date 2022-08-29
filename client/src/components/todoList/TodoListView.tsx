@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import type { TodoItem } from 'store/slices/todoSlice';
 import type { Filter } from 'store/slices/filterSlice';
 import { Todo } from './Todo';
