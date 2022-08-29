@@ -45,6 +45,8 @@ button {
   height: 23vh;
   z-index: -1;
   isolation: isolate;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 header {
   padding: 2.5rem 0;
