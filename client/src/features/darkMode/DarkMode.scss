@@ -1,0 +1,10 @@
+@use 'assets/styles/abstracts/colors';
+button.dark-mode {
+  background-color: transparent;
+  border: none;
+  svg {
+    path {
+      fill: colors.$fg-header;
+    }
+  }
+}

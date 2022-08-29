@@ -5,6 +5,8 @@ import { useTodoSelector, useTodoDispatch } from 'hooks/hooks';
 import { DarkMode } from 'features/darkMode/DarkMode';
 import { TodoContainer } from 'container/todoContainer/TodoContainer';
 import { TodoMenu } from 'components/todoMenu/TodoMenu';
+import DarkBG from 'assets/images/bg-desktop-dark.jpg';
+import LightBG from 'assets/images/bg-desktop-light.jpg';
 
 function App() {
   const { useEffect, useRef } = React;
@@ -26,18 +28,24 @@ function App() {
       data-theme='light'
       ref={appNode}
     >
-      <header>
-        <section className='banner'>
+      <div className='background'>
+        <img
+          src={DarkBG}
+          alt='background'
+        />
+      </div>
+      <div className='wrapper'>
+        <header>
           <h1>TODO</h1>
-        </section>
-        <section className='dark-mode'>
-          <DarkMode node={appNode} />
-        </section>
-      </header>
-      <main>
-        <TodoContainer />
-        <TodoMenu />
-      </main>
+          <div className='dark-mode'>
+            <DarkMode node={appNode} />
+          </div>
+        </header>
+        <main>
+          <TodoContainer />
+          <TodoMenu />
+        </main>
+      </div>
     </div>
   );
 }

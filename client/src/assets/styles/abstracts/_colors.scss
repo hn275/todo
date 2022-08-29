@@ -7,7 +7,7 @@
   /* --Dark-Grayish-Blue: hsl(236, 9%, 61%); */
   --fg-secondary: hsl(236, 9%, 61%);
   /* --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%); */
-  --fg-main: hsl(235, 19%, 35%);
+  --fg-secondary: hsl(235, 19%, 35%);
 }
 
 .App[data-theme='dark'] {
@@ -16,8 +16,6 @@
   --fg-main: hsl(234, 39%, 85%);
   --fg-secondary: hsl(234, 11%, 52%);
   /* --Light-Grayish-Blue-Hover: hsl(236, 33%, 92%); */
-  /* --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%); */
-  /* --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%); */
   --separator: hsl(237, 14%, 26%);
 }
 
@@ -26,3 +24,7 @@ $bg-secondary: var(--bg-secondary);
 $fg-main: var(--fg-main);
 $fg-secondary: var(--fg-secondary);
 $separator: var(--separator);
+/* --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%); */
+/* --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%); */
+
+$fg-header: hsl(236, 33%, 92%);

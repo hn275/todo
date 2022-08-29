@@ -1,6 +1,7 @@
 import { MutableRefObject, FC, useEffect, useState } from 'react';
 import { ReactComponent as Sun } from 'assets/images/icon-sun.svg';
 import { ReactComponent as Moon } from 'assets/images/icon-moon.svg';
+import './DarkMode.scss';
 
 interface DarkModeProps {
   node: MutableRefObject<HTMLDivElement | null>;
@@ -21,10 +22,11 @@ export const DarkMode: FC<DarkModeProps> = ({ node }) => {
   return (
     <>
       <button
+        className='dark-mode'
         onClick={handleClick}
         aria-label='dark mode toggle'
       >
-        {darkMode ? <Moon /> : <Sun />}
+        {darkMode ? <Sun /> : <Moon />}
       </button>
     </>
   );
