@@ -3,6 +3,7 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 import { handleGetRequest as getRequest } from 'store/todoThunks/getRequest';
 import { handlePostRequest as postRequest } from 'store/todoThunks/postRequest';
 import { putRequest } from '../todoThunks/putRequest';
+import { deleteRequest } from '../todoThunks/deleteRequest';
 
 interface TodoItem {
   id: string;
@@ -74,6 +75,19 @@ const todoSlice = createSlice({
       .addCase(putRequest.rejected, (state) => {
         state.status = 'error';
         console.log('failed to update todo item');
+      })
+      .addCase(deleteRequest.pending, (state) => {
+        state.status = 'pending';
+      })
+      .addCase(
+        deleteRequest.fulfilled,
+        (state, action: PayloadAction<TodoList>) => {
+          state.status = 'success';
+          state.todoList = action.payload.todoList;
+        }
+      )
+      .addCase(deleteRequest.rejected, (state) => {
+        state.status = 'error';
       });
   },
 });
