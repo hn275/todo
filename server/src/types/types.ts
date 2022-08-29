@@ -8,8 +8,7 @@ export interface TodoParamRequest extends Request {
 export interface Todo {
   id?: string;
   content: string;
-  isComplete: string | boolean;
-  isActive: string | boolean;
+  isComplete: boolean;
 }
 
 export interface RequestError extends Error {

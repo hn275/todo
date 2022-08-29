@@ -19,7 +19,6 @@ export const postTodo = (req: Request, res: Response, next: NextFunction) => {
     id: uuid(),
     content: content,
     isComplete: false,
-    isActive: false,
   };
   data.todoList.push(newTodo as never);
   writeFile(data);

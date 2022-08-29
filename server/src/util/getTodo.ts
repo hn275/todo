@@ -3,9 +3,8 @@ import data from '../data.json';
 
 export const getTodo = (req: Request, res: Response) => {
   try {
-    res.json(data);
+    if (data) res.json(data);
   } catch (error) {
-    console.log('to do list currently empty');
-    res.json({ todoList: [] });
+    res.status(404).json({ todoList: [] });
   }
 };
