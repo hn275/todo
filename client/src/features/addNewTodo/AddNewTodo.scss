@@ -1,0 +1,13 @@
+@use 'assets/styles/abstracts/colors';
+
+.todo-new-input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: colors.$fg-secondary;
+  font-family: 'Josefin sans';
+  transition: color 150ms linear;
+  &:focus {
+    color: colors.$fg-main;
+  }
+}

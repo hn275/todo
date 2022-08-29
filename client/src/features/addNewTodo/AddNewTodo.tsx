@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { TextField } from 'components/textField/TextField';
 import { useTodoDispatch } from 'hooks/hooks';
 import { handlePostRequest } from 'store/todoThunks/postRequest';
+import './AddNewTodo.scss';
 
 interface AddNewTodoProps {}
 export const AddNewTodo: React.FC<AddNewTodoProps> = () => {
@@ -19,8 +20,12 @@ export const AddNewTodo: React.FC<AddNewTodoProps> = () => {
 
   return (
     <>
-      <TextField onClick={handleSubmit}>
+      <TextField
+        onClick={handleSubmit}
+        isInputField
+      >
         <input
+          className='todo-new-input'
           type='text'
           placeholder='Create a new todo...'
           value={newTodo}

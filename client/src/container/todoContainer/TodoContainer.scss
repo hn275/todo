@@ -1,0 +1,11 @@
+#todo-app {
+  .todo-new {
+    margin-bottom: 1em;
+    border-bottom-color: transparent !important;
+    border-radius: 5px;
+    overflow: hidden;
+    .text-field {
+      border-bottom: none;
+    }
+  }
+}

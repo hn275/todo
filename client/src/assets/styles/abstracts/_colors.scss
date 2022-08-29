@@ -1,12 +1,9 @@
 .App[data-theme='light'] {
   --bg-main: hsl(0, 0%, 98%);
   --bg-secondary: white;
-  /* --Very-Light-Grayish-Blue: hsl(236, 33%, 92%); */
   --separator: hsl(236, 33%, 92%);
   --Light-Grayish-Blue: hsl(233, 11%, 84%);
-  /* --Dark-Grayish-Blue: hsl(236, 9%, 61%); */
   --fg-secondary: hsl(236, 9%, 61%);
-  /* --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%); */
   --fg-secondary: hsl(235, 19%, 35%);
 }
 
@@ -23,8 +20,16 @@ $bg-main: var(--bg-main);
 $bg-secondary: var(--bg-secondary);
 $fg-main: var(--fg-main);
 $fg-secondary: var(--fg-secondary);
+$fg-disabled: var(--fg-disabled);
 $separator: var(--separator);
 /* --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%); */
 /* --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%); */
 
 $fg-header: hsl(236, 33%, 92%);
+
+$fg-hover: hsl(220deg, 98%, 61%);
+$gradient: linear-gradient(
+  -30deg,
+  hsl(280deg, 87%, 65%),
+  hsl(192deg, 100%, 67%)
+);

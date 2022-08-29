@@ -1,5 +1,6 @@
 import { AddNewTodo } from 'features/addNewTodo/AddNewTodo';
 import { TodoList } from 'components/todoList/TodoList';
+import './TodoContainer.scss';
 
 export const TodoContainer = () => {
   return (
