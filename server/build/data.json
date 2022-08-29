@@ -1,0 +1,24 @@
+{
+    "todoList": [
+        {
+            "id": "8500013c-0030-4f08-bc63-681781c5761a",
+            "content": "Feel free to post a todo :D",
+            "isComplete": false
+        },
+        {
+            "id": "1c86caea-23d1-4dbb-9170-383475731ced",
+            "content": "hello world",
+            "isComplete": false
+        },
+        {
+            "id": "3a9736cd-fa17-45de-a3cb-958a7163299d",
+            "content": "nice",
+            "isComplete": false
+        },
+        {
+            "id": "80825bc5-7c5e-4b11-aacd-e3242b2a4526",
+            "content": "Made a todo app",
+            "isComplete": true
+        }
+    ]
+}

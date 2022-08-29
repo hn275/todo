@@ -1,3 +1,4 @@
+import * as functions from 'firebase-functions';
 import express from 'express';
 import cors from 'cors';
 
@@ -10,7 +11,11 @@ import { errorHandler } from './util/errorHandler';
 const PORT = process.env.PORT || 4000; // port
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: 'https://todobyhal.netlify.app/',
+  })
+);
 app.use(express.json());
 
 // Handling requests
@@ -22,3 +27,5 @@ app.put('/', putTodo);
 app.use(errorHandler);
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+
+exports.app = functions.https.onRequest(app);
