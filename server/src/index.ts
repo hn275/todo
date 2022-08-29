@@ -1,4 +1,3 @@
-import * as functions from 'firebase-functions';
 import express from 'express';
 import cors from 'cors';
 
@@ -27,5 +26,3 @@ app.put('/', putTodo);
 app.use(errorHandler);
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
-
-exports.app = functions.https.onRequest(app);
