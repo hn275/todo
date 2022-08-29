@@ -1,18 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import type { TodoItem } from 'store/slices/todoSlice';
-import { TextField } from 'components/textField/TextField';
+import type { Filter } from 'store/slices/filterSlice';
 import { Todo } from './Todo';
+import { useTodoSelector } from 'hooks/hooks';
+import { todoFiltered } from './todoFiltered';
 
 interface TodoListViewProps {
   todo: TodoItem[];
 }
 
 export const TodoListView: React.FC<TodoListViewProps> = ({ todo }) => {
-  // Dispatch action
+  // Get filter
+  const filter: Filter = useTodoSelector((state) => state.filter.filter);
+  const todoList = todoFiltered(filter, todo);
 
   // Get all todo items and render them through TextField component
   const getAllTodoItems = () => {
-    return todo.map((todoItem: TodoItem) => {
+    return todoList!.map((todoItem: TodoItem) => {
       return (
         <Todo
           key={todoItem.id}

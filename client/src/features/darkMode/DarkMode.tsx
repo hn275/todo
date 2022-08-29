@@ -17,7 +17,6 @@ export const DarkMode: FC<DarkModeProps> = ({ node }) => {
     } else {
       node.current!.dataset.theme = 'light';
     }
-    console.log(node.current!.dataset.theme);
   }, [darkMode]);
   return (
     <>
