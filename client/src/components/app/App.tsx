@@ -4,6 +4,7 @@ import { handleGetRequest } from 'store/todoThunks/getRequest';
 import { useTodoSelector, useTodoDispatch } from 'hooks/hooks';
 import { DarkMode } from 'features/darkMode/DarkMode';
 import { TodoContainer } from 'container/todoContainer/TodoContainer';
+import { TodoMenu } from 'components/todoMenu/TodoMenu';
 
 function App() {
   const { useEffect, useRef } = React;
@@ -35,6 +36,7 @@ function App() {
       </header>
       <main>
         <TodoContainer />
+        <TodoMenu />
       </main>
     </div>
   );
