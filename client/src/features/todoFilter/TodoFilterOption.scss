@@ -1,0 +1,15 @@
+@use 'assets/styles/abstracts/colors';
+.todo-filter {
+  background-color: colors.$bg-secondary;
+  margin-top: 1em;
+  padding: 1.2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 5px;
+  box-shadow: colors.$boxShadow;
+}
+button.active {
+  color: colors.$fg-active;
+}

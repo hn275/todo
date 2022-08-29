@@ -1,19 +1,15 @@
 import { TodoRemain } from 'features/todoRemain/TodoRemain';
 import { TodoFilter } from 'features/todoFilter/TodoFilter';
 import { ClearComplete } from 'features/clearComplete/ClearComplete';
+import './TodoMenu.scss';
 
 export const TodoMenu = () => {
   return (
     <>
-      <div className='todo-left'>
+      <section className='todo-menu box-container'>
         <TodoRemain />
-      </div>
-      <div className='todo-filter'>
-        <TodoFilter />
-      </div>
-      <div className='todo-clear'>
         <ClearComplete />
-      </div>
+      </section>
     </>
   );
 };

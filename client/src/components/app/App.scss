@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Josefin Sans';
 }
 
 .App {
@@ -12,11 +13,20 @@
   font-size: 1.125rem;
   overflow-y: scroll;
   height: 100vh;
-  font-family: 'Josefin Sans';
+  color: colors.$fg-secondary;
 }
 
 button {
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: colors.$fg-secondary;
+  transition: color 150ms linear;
+  font-size: 1rem;
+  &:hover {
+    color: colors.$fg-main;
+  }
 }
 
 .wrapper {

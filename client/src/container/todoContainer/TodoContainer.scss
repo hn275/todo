@@ -1,3 +1,4 @@
+@use 'assets/styles/abstracts/colors';
 #todo-app {
   .todo-new {
     margin-bottom: 1em;
@@ -7,5 +8,10 @@
     .text-field {
       border-bottom: none;
     }
+  }
+  .todo-list {
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: colors.$boxShadow;
   }
 }

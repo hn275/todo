@@ -1,0 +1,5 @@
+@use 'assets/styles/abstracts/colors';
+.todo-remain {
+  color: colors.$fg-secondary;
+  font-size: 1rem;
+}

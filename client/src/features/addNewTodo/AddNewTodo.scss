@@ -1,13 +1,16 @@
 @use 'assets/styles/abstracts/colors';
 
 .todo-new-input {
+  font-size: 1rem;
   background-color: transparent;
   outline: none;
   border: none;
   color: colors.$fg-secondary;
-  font-family: 'Josefin sans';
   transition: color 150ms linear;
   &:focus {
     color: colors.$fg-main;
   }
+}
+input::placeholder {
+  transform: translateY(2em);
 }

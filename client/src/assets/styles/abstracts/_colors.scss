@@ -26,10 +26,12 @@ $separator: var(--separator);
 /* --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%); */
 
 $fg-header: hsl(236, 33%, 92%);
-
+$fg-active: hsl(220deg, 98%, 61%);
 $fg-hover: hsl(220deg, 98%, 61%);
 $gradient: linear-gradient(
   -30deg,
   hsl(280deg, 87%, 65%),
   hsl(192deg, 100%, 67%)
 );
+
+$boxShadow: 0px 2px 7px hsla(0deg, 0%, 20%, 20%);

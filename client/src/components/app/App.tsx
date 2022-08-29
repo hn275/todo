@@ -5,6 +5,7 @@ import { useTodoSelector, useTodoDispatch } from 'hooks/hooks';
 import { DarkMode } from 'features/darkMode/DarkMode';
 import { TodoContainer } from 'container/todoContainer/TodoContainer';
 import { TodoMenu } from 'components/todoMenu/TodoMenu';
+import { TodoFilter } from 'features/todoFilter/TodoFilter';
 import DarkBG from 'assets/images/bg-desktop-dark.jpg';
 import LightBG from 'assets/images/bg-desktop-light.jpg';
 
@@ -43,7 +44,7 @@ function App() {
         </header>
         <main>
           <TodoContainer />
-          <TodoMenu />
+          <TodoFilter />
         </main>
       </div>
     </div>

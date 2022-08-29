@@ -23,6 +23,7 @@ export const Todo: React.FC<TodoProps> = ({ todo }) => {
       <TextField
         isComplete={todo.isComplete}
         onClick={handleTodoComplete}
+        id={todo.id}
       >
         {todo.content}
       </TextField>

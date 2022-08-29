@@ -1,13 +1,16 @@
 import React, { useEffect, useRef } from 'react';
-import './TextField.scss';
+import { deleteRequest } from 'store/todoThunks/deleteRequest';
+import { useTodoDispatch } from 'hooks/hooks';
 import { ReactComponent as CheckMark } from 'assets/images/icon-check.svg';
 import { ReactComponent as Cross } from 'assets/images/icon-cross.svg';
+import './TextField.scss';
 
 interface TextFieldProps {
   children: React.ReactNode;
   isComplete?: boolean | undefined;
   onClick: () => void;
   isInputField?: boolean | undefined;
+  id?: string; // for delete request
 }
 
 export const TextField: React.FC<TextFieldProps> = ({
@@ -15,7 +18,9 @@ export const TextField: React.FC<TextFieldProps> = ({
   isComplete,
   onClick,
   isInputField,
+  id,
 }) => {
+  // Toggling complete
   const nodeRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     if (isComplete) {
@@ -24,6 +29,13 @@ export const TextField: React.FC<TextFieldProps> = ({
       nodeRef.current!.classList.remove('todo-is-complete');
     }
   }, [isComplete]);
+
+  // Handle delete request
+  const dispatch = useTodoDispatch();
+  const handleDelete = () => {
+    dispatch(deleteRequest([id!]));
+  };
+
   // TSX
   return (
     <div
@@ -39,7 +51,7 @@ export const TextField: React.FC<TextFieldProps> = ({
       <div className='text-field-text'>{children}</div>
       {!isInputField && (
         <div className='text-delete'>
-          <button onClick={() => null}>
+          <button onClick={handleDelete}>
             <Cross />
           </button>
         </div>
