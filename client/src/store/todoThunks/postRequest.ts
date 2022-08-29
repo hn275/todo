@@ -3,7 +3,7 @@ import axios from 'axios';
 import { SERVER_URL } from 'assets/constants';
 
 interface NewTodo {
-  todo: string;
+  content: string;
 }
 
 export const handlePostRequest = createAsyncThunk(

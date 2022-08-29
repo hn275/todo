@@ -9,8 +9,8 @@ export const TodoFilter = () => {
   // const [filter, setFilter] = useState<Filter>(todoFilter);
   const dispatch = useTodoDispatch();
   const handleFilterClick: MouseEventHandler = (event) => {
-    const { value } = event.currentTarget as HTMLButtonElement;
-    dispatch(setFilter(value as Filter));
+    // const { value } = event.currentTarget as HTMLButtonElement;
+    // dispatch(setFilter(value as Filter));
   };
 
   // useEffect(() => {

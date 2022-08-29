@@ -12,7 +12,7 @@ export const AddNewTodo: React.FC<AddNewTodoProps> = () => {
 
   const dispatch = useTodoDispatch();
   const handleSubmit = () => {
-    const dispatchNewTodo = { todo: newTodo };
+    const dispatchNewTodo = { content: newTodo };
     dispatch(handlePostRequest(dispatchNewTodo)); // dispatch action
     setNewTodo(() => ''); // clear input field
   };

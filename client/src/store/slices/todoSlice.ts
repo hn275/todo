@@ -8,7 +8,6 @@ interface TodoItem {
   id: string;
   content: string;
   isComplete: boolean;
-  isActive: boolean;
 }
 
 interface TodoList {
@@ -69,7 +68,7 @@ const todoSlice = createSlice({
           const todoIndex = state.todoList.findIndex((todo: TodoItem) => {
             return todo.id === action.payload.id;
           });
-          state.todoList[todoIndex] = action.payload;
+          if (todoIndex !== -1) state.todoList[todoIndex] = action.payload;
         }
       )
       .addCase(putRequest.rejected, (state) => {

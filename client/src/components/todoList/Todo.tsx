@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { TextField } from 'components/textField/TextField';
 import type { TodoItem } from 'store/slices/todoSlice';
 import { useTodoDispatch } from 'hooks/hooks';
@@ -8,24 +8,20 @@ interface TodoProps {
   todo: TodoItem;
 }
 export const Todo: React.FC<TodoProps> = ({ todo }) => {
-  const [todoComplete, setTodoComplete] = useState<boolean>(todo.isComplete);
-  const handleTodoComplete = () => {
-    setTodoComplete((isComplete) => !isComplete);
-  };
-  // put request for completing todo
   const dispatch = useTodoDispatch();
-  useEffect(() => {
+  // Toggle todo state
+  const handleTodoComplete = () => {
     const newTodoState = {
       id: todo.id,
-      isComplete: todoComplete,
+      isComplete: !todo.isComplete,
     };
     dispatch(putRequest(newTodoState));
-  }, [todoComplete]);
+  };
 
   return (
     <>
       <TextField
-        isComplete={todoComplete}
+        isComplete={todo.isComplete}
         onClick={handleTodoComplete}
       >
         {todo.content}
