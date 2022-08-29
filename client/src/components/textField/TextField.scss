@@ -93,7 +93,7 @@
 /* Todo complete state */
 .todo-is-complete {
   .text-field-text {
-    color: colors.$separator;
+    color: colors.$fg-secondary;
     text-decoration: line-through;
   }
   .text-field-indicator {
