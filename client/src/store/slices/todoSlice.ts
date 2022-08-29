@@ -14,23 +14,17 @@ interface TodoItem {
 interface TodoList {
   todoList: TodoItem[];
   status?: 'idle' | 'pending' | 'success' | 'error';
-  filter: 'all' | 'active' | 'complete';
 }
 
 const initialState: TodoList = {
   todoList: [],
   status: 'idle',
-  filter: 'all',
 };
 
 const todoSlice = createSlice({
   name: 'todo',
   initialState,
-  reducers: {
-    setFilter: (state, action: PayloadAction<typeof state.filter>) => {
-      state.filter = action.payload;
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       // Get
