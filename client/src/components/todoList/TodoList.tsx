@@ -6,7 +6,6 @@ import type { TodoItem } from 'store/slices/todoSlice';
 
 export const TodoList = () => {
   const todoList: TodoItem[] = useTodoSelector((state) => state.todo.todoList);
-  useEffect(() => console.log(todoList), [todoList]); // BUG: debuggo
 
   // TSX
   return (
