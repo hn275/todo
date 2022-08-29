@@ -5,11 +5,11 @@ import { writeFile } from './writeFile';
 import data from '../data.json';
 
 export const postTodo = (req: Request, res: Response, next: NextFunction) => {
-  const { todo } = req.body.data;
+  const { content } = req.body.data;
   // error handling
-  if (!todo) {
+  if (!content) {
     const error: RequestError = new Error(
-      'bad request, request body needs to have { "todo": "todo task" }'
+      'bad request, request body needs to have { "content": "todo task" }'
     );
     error.status = 400;
     return next(error);
@@ -17,7 +17,7 @@ export const postTodo = (req: Request, res: Response, next: NextFunction) => {
   // add new todo to json
   const newTodo: Todo = {
     id: uuid(),
-    content: todo,
+    content: content,
     isComplete: false,
     isActive: false,
   };

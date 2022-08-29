@@ -1,68 +1,20 @@
 {
   "todoList": [
     {
-      "id": "33db3e97-1b85-47a0-a5d6-a29745f7bd6e",
+      "id": "658c5146-cefa-450c-b9b8-c75427c33b53",
+      "content": "hello world",
+      "isComplete": false,
+      "isActive": false
+    },
+    {
+      "id": "b653482b-39e6-4c72-b1ed-b47a304f34a1",
       "content": "hello world2",
-      "isComplete": true,
-      "isActive": true
-    },
-    {
-      "id": "86fcbd96-ab17-4d3d-8fa8-db434d492e91",
-      "content": "hhellolo its me",
       "isComplete": false,
       "isActive": false
     },
     {
-      "id": "bdafe0ed-d41e-4c5c-917b-eca2bcb7d83e",
-      "content": "hhellolo its me",
-      "isComplete": false,
-      "isActive": false
-    },
-    {
-      "id": "898c1a8b-2eec-4457-8b51-688f333d6d1e",
-      "content": "hhellolo its me",
-      "isComplete": false,
-      "isActive": false
-    },
-    {
-      "id": "cc4bd2aa-a09e-4fa4-96df-422a5e35a481",
-      "content": "asdfasdf",
-      "isComplete": false,
-      "isActive": false
-    },
-    {
-      "id": "2c02cdb4-9ed2-4b1b-9456-3abde55db309",
-      "content": "asdfsadf",
-      "isComplete": false,
-      "isActive": false
-    },
-    {
-      "id": "0be06c3c-bd85-47cf-9ff9-93f0cbf3956a",
-      "content": "asdfsdfghhdfgh",
-      "isComplete": false,
-      "isActive": false
-    },
-    {
-      "id": "44a6e0b2-94d4-4b80-ad72-63ad0c8c5090",
-      "content": "fgdhdfghd",
-      "isComplete": false,
-      "isActive": false
-    },
-    {
-      "id": "69f94065-1307-44b0-9a60-b9e3b8f615ec",
-      "content": "hfghdfgh",
-      "isComplete": false,
-      "isActive": false
-    },
-    {
-      "id": "eb7a62d6-6b39-471c-a9fd-82c4294187cc",
-      "content": "asdfsdafghjhg asdzdf",
-      "isComplete": false,
-      "isActive": false
-    },
-    {
-      "id": "255266af-131d-47d4-bf1f-a568085a2091",
-      "content": "asdfasdff",
+      "id": "582bec7c-4795-4f72-ae3d-de48259c02d9",
+      "content": "hello world3",
       "isComplete": false,
       "isActive": false
     }

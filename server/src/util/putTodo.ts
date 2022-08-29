@@ -21,8 +21,8 @@ export const putTodo = (
   // update todo
   try {
     // update todo
-    if (isComplete) data.todoList[todoIndex].isComplete = isComplete;
-    if (isActive) data.todoList[todoIndex].isActive = isActive;
+    const updateTodo: Todo = data.todoList[todoIndex];
+    updateTodo.isComplete = isComplete;
 
     // write file
     writeFile(data);
