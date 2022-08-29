@@ -1,22 +1,14 @@
 {
   "todoList": [
     {
-      "id": "479bd6d0-3fa6-4cb7-aae1-986227a4d359",
-      "content": "hello world3",
-      "isComplete": true,
-      "isActive": false
+      "id": "57b75d64-8979-487e-969c-84721778a42a",
+      "content": "asdfasd",
+      "isComplete": false
     },
     {
-      "id": "91f34182-12d7-4cf3-890a-f44ecd05aaa8",
-      "content": "hello world2",
-      "isComplete": false,
-      "isActive": false
-    },
-    {
-      "id": "ce99107c-342c-4c6e-a808-169fbed75e8c",
-      "content": "hello world1",
-      "isComplete": false,
-      "isActive": false
+      "id": "a326d4e0-327c-440b-a66d-40704d71b3b7",
+      "content": "hello world 4",
+      "isComplete": false
     }
   ]
 }
