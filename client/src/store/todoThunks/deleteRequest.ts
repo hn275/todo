@@ -5,7 +5,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 export const deleteRequest = createAsyncThunk(
   'deleteTodo',
   async (ids: string[]) => {
-    const response = await axios.delete(SERVER_URL, { data: ids });
+    const response = await axios.delete(SERVER_URL, { data: { ids: ids } });
     return response.data;
   }
 );

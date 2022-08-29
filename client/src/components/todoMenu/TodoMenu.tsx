@@ -1,5 +1,6 @@
 import { TodoRemain } from 'features/todoRemain/TodoRemain';
 import { TodoFilter } from 'features/todoFilter/TodoFilter';
+import { ClearComplete } from 'features/clearComplete/ClearComplete';
 
 export const TodoMenu = () => {
   return (
@@ -10,7 +11,9 @@ export const TodoMenu = () => {
       <div className='todo-filter'>
         <TodoFilter />
       </div>
-      <div className='todo-clear'></div>
+      <div className='todo-clear'>
+        <ClearComplete />
+      </div>
     </>
   );
 };
