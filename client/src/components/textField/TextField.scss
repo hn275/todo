@@ -1,29 +1,57 @@
+@use 'assets/styles/abstracts/colors';
+
 .text-field {
-  background-color: gray;
-  padding: 0.5em;
+  background-color: colors.$bg-secondary;
+  color: colors.$fg-main;
+  border-bottom: 1px solid colors.$separator;
+  padding: 1rem;
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 1em;
+
   .text-field-indicator {
-    height: 1em;
-    width: 1em;
+    height: 1.1em;
+    width: 1.1em;
     border-radius: 50%;
     outline: none;
     cursor: pointer;
     border: 1px solid hsla(0deg, 20%, 10%, 60%); // TODO: inject colors
-    background: blue; // TODO: inject color
+    background: gray; // TODO: inject color
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     svg {
-      height: 100%;
-      width: 100%;
+      height: 0.7rem;
+      width: 0.7rem;
       position: relative;
-      top: 4px;
-      left: 3px;
+      top: 0.07em;
+      /* left: 0.15em; */
     }
+  }
+
+  .text-field-text {
+    flex-grow: 1;
+  }
+
+  .text-delete {
+    opacity: 0;
+    transition: opacity 450ms;
+    button {
+      border: none;
+      background: none;
+      outline: none;
+      position: relative;
+      overflow: hidden;
+      svg {
+        position: relative;
+        top: 0.17em;
+      }
+    }
+  }
+  &:hover .text-delete {
+    opacity: 1;
   }
 }

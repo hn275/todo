@@ -8,5 +8,9 @@
 .App {
   background: colors.$bg-main;
   transition: all 100ms linear;
-  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+button {
+  cursor: pointer;
 }
