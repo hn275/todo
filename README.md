@@ -4,6 +4,8 @@ Challenge created by [Frontend Mentor](https://www.frontendmentor.io/challenges/
 
 Todo web app, made with ReactJS, NodeJS, written in TypeSript.
 
+[Live site](https://todobyhal.netlify.app)
+
 ## Screenshot
 
 ![Dark Mode](./design/desktop-preview.jpg)
