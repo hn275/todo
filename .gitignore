@@ -2,3 +2,7 @@
 
 # Local Netlify folder
 .netlify
+
+server/src/data.json
+
+server/Procfile
